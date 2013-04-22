@@ -27,6 +27,9 @@ $reveal-border-style:    solid !default;
 $reveal-border-width:    1px !default;
 $reveal-border-color:    #666 !default;
 
+// Z-index for reveal
+$reveal-overlay-zindex:  98 !default;
+
 //
 // Reveal Mixins
 //
@@ -38,7 +41,7 @@ $reveal-border-color:    #666 !default;
   width: 100%;
   background: $reveal-overlay-bg-old;
   background: $reveal-overlay-bg;
-  z-index: 98;
+  z-index: $reveal-overlay-zindex;
   display: none;
   top: 0;
   #{$default-float}: 0;
@@ -51,7 +54,7 @@ $reveal-border-color:    #666 !default;
     display: none;
     position: absolute;
     #{$default-float}: 50%;
-    z-index: 99;
+    z-index: $reveal-overlay-zindex+1;
     height: auto;
     background-color: #fff;
 
